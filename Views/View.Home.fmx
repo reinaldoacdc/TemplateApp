@@ -139,12 +139,12 @@ object PageHome: TPageHome
               ControlCollection = <
                 item
                   Column = 0
-                  Control = btnNovoCliente
+                  Control = btnNovoCRUD
                   Row = 0
                 end
                 item
                   Column = 1
-                  Control = btnListarClientes
+                  Control = btnListarCRUD
                   Row = 0
                 end>
               RowCollection = <
@@ -154,7 +154,7 @@ object PageHome: TPageHome
                 item
                   SizeStyle = Auto
                 end>
-              object btnNovoCliente: TButton
+              object btnNovoCRUD: TButton
                 Align = Client
                 Margins.Left = 10.000000000000000000
                 Margins.Top = 10.000000000000000000
@@ -166,8 +166,9 @@ object PageHome: TPageHome
                 StyleLookup = 'BtnGreen'
                 TabOrder = 6
                 Text = 'Novo CRUD'
+                OnClick = btnNovoCRUDClick
               end
-              object btnListarClientes: TButton
+              object btnListarCRUD: TButton
                 Align = Client
                 Margins.Left = 10.000000000000000000
                 Margins.Top = 10.000000000000000000
@@ -179,6 +180,7 @@ object PageHome: TPageHome
                 StyleLookup = 'BtnGreen'
                 TabOrder = 5
                 Text = 'Listar CRUD'
+                OnClick = btnListarCRUDClick
               end
             end
           end

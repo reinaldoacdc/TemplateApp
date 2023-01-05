@@ -6,7 +6,7 @@ uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
   FMX.Controls.Presentation, FMX.MultiView, FMX.StdCtrls, FMX.Ani,
-  FMX.ListBox, System.ImageList, FMX.ImgList, FMX.Objects;
+  FMX.ListBox, System.ImageList, FMX.ImgList, FMX.Objects, View.Clientes;
 
 type
   TPageHome = class(TForm)
@@ -22,14 +22,16 @@ type
     GridPanelLayout3: TGridPanelLayout;
     LayoutOutros: TLayout;
     StyleBook: TStyleBook;
-    btnNovoCliente: TButton;
+    btnNovoCRUD: TButton;
     Image1: TImage;
     Label5: TLabel;
-    btnListarClientes: TButton;
+    btnListarCRUD: TButton;
     procedure FormShow(Sender: TObject);
     procedure FormKeyUp(Sender: TObject; var Key: Word; var KeyChar: Char;
       Shift: TShiftState);
     procedure FormCloseQuery(Sender: TObject; var CanClose: Boolean);
+    procedure btnNovoCRUDClick(Sender: TObject);
+    procedure btnListarCRUDClick(Sender: TObject);
   private
     Fuser: String;
 
@@ -46,7 +48,7 @@ var
 implementation
 
 uses
-  FMX.DialogService;
+  FMX.DialogService, View.NovoCliente;
 
 {$R *.fmx}
 
@@ -57,14 +59,21 @@ uses
 //  PagePedidos.SHow;
 //end;
 //
-//procedure TPageHome.btnNovoClienteClick(Sender: TObject);
-//begin
-//  PageNovoCliente :=  TPageNovoCliente.Create(Self);
-//  PageNovoCliente.ID := 0;
-//  PageNovoCliente.Parent := Self;
-//  PageNovoCliente.Show;
-//end;
 
+
+procedure TPageHome.btnListarCRUDClick(Sender: TObject);
+begin
+  PageClientes := TPageClientes.Create(Self);
+  PageClientes.Show;
+end;
+
+procedure TPageHome.btnNovoCRUDClick(Sender: TObject);
+begin
+  PageNovoCliente :=  TPageNovoCliente.Create(Self);
+  PageNovoCliente.ID := 0;
+  PageNovoCliente.Parent := Self;
+  PageNovoCliente.Show;
+end;
 
 procedure TPageHome.FormCloseQuery(Sender: TObject; var CanClose: Boolean);
 begin
