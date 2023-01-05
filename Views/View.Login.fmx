@@ -1,0 +1,179 @@
+object PageLogin: TPageLogin
+  Left = 0
+  Top = 0
+  Caption = 'Firebase'
+  ClientHeight = 553
+  ClientWidth = 371
+  Fill.Kind = Solid
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Layout1: TLayout
+    Align = Center
+    Size.Width = 235.000000000000000000
+    Size.Height = 322.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object rect_login: TRectangle
+      Align = Top
+      Fill.Color = xFF2E92E9
+      Margins.Top = 20.000000000000000000
+      Position.Y = 140.000000000000000000
+      Size.Width = 235.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 4.000000000000000000
+      YRadius = 4.000000000000000000
+      OnClick = rect_loginClick
+      object Label1: TLabel
+        Align = Center
+        StyledSettings = [Family]
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'Acessar'
+        TabOrder = 0
+      end
+    end
+    object Rectangle1: TRectangle
+      Align = Top
+      Fill.Color = claSlategray
+      Size.Width = 235.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object edt_login_email: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        StyleLookup = 'transparentedit'
+        TabOrder = 0
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFFE8E8E8
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'E-mail'
+        StyledSettings = [Family, Style]
+      end
+    end
+    object Rectangle2: TRectangle
+      Align = Top
+      Fill.Color = claSlategray
+      Margins.Top = 20.000000000000000000
+      Position.Y = 70.000000000000000000
+      Size.Width = 235.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object edt_login_senha: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        Align = Client
+        StyleLookup = 'transparentedit'
+        TabOrder = 0
+        Password = True
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.FontColor = xFFE8E8E8
+        Margins.Left = 5.000000000000000000
+        Margins.Right = 5.000000000000000000
+        Size.Width = 225.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        TextPrompt = 'Senha'
+        StyledSettings = [Family, Style]
+      end
+    end
+    object rect_criar_conta: TRectangle
+      Align = Bottom
+      Fill.Kind = None
+      Margins.Top = 20.000000000000000000
+      Position.Y = 272.000000000000000000
+      Size.Width = 235.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = xFF2E92E9
+      Visible = False
+      XRadius = 4.000000000000000000
+      YRadius = 4.000000000000000000
+      object Label2: TLabel
+        Align = Center
+        StyledSettings = [Family]
+        TextSettings.Font.Size = 14.000000000000000000
+        TextSettings.Font.StyleExt = {00060000000000000004000000}
+        TextSettings.FontColor = xFF2E92E9
+        TextSettings.HorzAlign = Center
+        Text = 'Criar minha conta'
+        TabOrder = 0
+      end
+    end
+  end
+  object ToolBar1: TToolBar
+    Size.Width = 371.000000000000000000
+    Size.Height = 48.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'toolbarstyle'
+    TabOrder = 1
+    object Rectangle3: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Size.Width = 371.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      object Image1: TImage
+        MultiResBitmap.Height = 128
+        MultiResBitmap.Width = 128
+        MultiResBitmap = <
+          item
+            Width = 128
+            Height = 128
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000080000000800806000000C33E61
+              CB000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              025149444154785EEDDCBD6A14511806E06FB2FE140A01ED2C34BD888D37A026
+              487201DE80112B1BF13644110591A817606F2046AFC142AD83A2B5FF4296DDF1
+              8C7B4821EECE5865C7F33CCDF9D9F2FB76CEEC59780300000000000000000000
+              00E8AD2A8F9D5DDD8A337554EBA3888B8388A5B47564F209FBE47BAAC5CEC238
+              B6EBAADE787C295EE7FD4E3A37C0F56771F8E7A0BAFDB18A6B272216F236F365
+              348E78F0F5537DE3E9E5D8CD7B33756A80DFC53F506DA6E9F9C90EF32C35C1CB
+              D404AB5D9AA0D337F9C7A0BA9306C5EF8954D40B8B8BD5ADBC9CA9F509D09CF9
+              1FA27AE5B1DF3BA318D5673756E34D5EFF556B519B173EC5EFA5410CAA2B793E
+              557B61EB58CE33FA67258F53B536C0701827F394FE3995C7A95A1BE0E0A1F40C
+              A0AF5A6BD7E508789F67F4CFBB3C4ED5DA00751DCFF3949E495FFFAD3C9DAABD
+              01AA7A230DA3C98A1E198D17EA47793E556B033477CBCDF5625ED21FF79F2CC7
+              DB3C9FAAFD1D2069EE96631C2FF29239978EEDED8563F5CDBC9CA953033477CA
+              9FBFD46BE950B997968E83F9D5D4E6EEE078BDF6F05C0C275BB3FDF3DFC1EB9B
+              713ADF30AD0C776329FD4C3C3AF984FD906AF02DD560A779E16BCEFC2E8F7D00
+              000000000000E0FF261FA0FFE403B0473E00F2018A978A2A1F00F900A5930F80
+              7C80D2C907289C7C80C2C90728997C80B2C907289C7C8052C90728977C80D2C8
+              070000000000000000FE241FA0FFE403B0473E00F2018A978A2A1F00F900A593
+              0F807C80D2C907289C7C80C2C90728997C80B2C907289C7C8052C90728977C80
+              D2C8070000000000000000000000805245FC02897D47E25E65FF130000000049
+              454E44AE426082}
+            FileName = 'D:\99Coders\CursoMercado\Fontes\Mobile\Images\menu.png'
+          end>
+        Align = Left
+        Margins.Left = 5.000000000000000000
+        Position.X = 5.000000000000000000
+        Size.Width = 40.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Label5: TLabel
+      Align = Contents
+      StyledSettings = [Family, Style, FontColor]
+      Size.Width = 371.000000000000000000
+      Size.Height = 48.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.HorzAlign = Center
+      Text = 'Template APP'
+      TabOrder = 0
+    end
+  end
+end
