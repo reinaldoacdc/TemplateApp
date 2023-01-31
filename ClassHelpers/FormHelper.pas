@@ -2,10 +2,12 @@ unit FormHelper;
 
 interface
 
-uses Forms, Vcl.Controls;
+uses
+  Vcl.Forms, Vcl.Controls;
 
 type
   TFormHelper = class helper for TForm
+  procedure OpenForm(form: TForm; formClass: TFormClass; control: TWinControl);
   procedure ClearForm;
 end;
 
@@ -31,6 +33,19 @@ begin
        (Self.Components [i] as TMemo).Text := ''
     else if (Self.Components[i] is TCheckBox) then
        (Self.Components [i] as TCheckBox).Checked := False;
+end;
+
+procedure TFormHelper.OpenForm(form: TForm; formClass: TFormClass;
+  control: TWinControl);
+begin
+  if not(Assigned(form)) then
+  begin
+    form := formClass.Create(nil);
+    form.Parent := control;
+    form.Align := alClient;
+    form.BorderStyle := bsNone;
+    form.Show;
+  end;
 end;
 
 end.
