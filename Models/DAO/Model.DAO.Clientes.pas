@@ -12,7 +12,7 @@ uses Model.Cliente;
 //  Refactor.Model.DAO.Interfaces, Model.List.DescriptionList;
 
 type
-  TModelDAOClientes = class(TInterfacedObject, iModelDAOEntity<TCLIENTE>)
+  TModelDAOUsers = class(TInterfacedObject, iModelDAOEntity<TCLIENTE>)
     private
       FConnection : iModelComponentsConnections;
       FDataSet : TDataSource;
@@ -65,7 +65,7 @@ begin
       .AddParam('ID', FEntity.ID)
     .ExecSQL;
   except on ex:exception do
-    raise Exception.Create('Erro ao Excluir Usuário: ' + ex.Message);
+    raise Exception.Create('Erro ao Excluir Usuï¿½rio: ' + ex.Message);
   end;
 end;
 
@@ -107,7 +107,7 @@ begin
       .AddParam('NAME', FEntity.NAME)
     .ExecSQL;
   except on ex:exception do
-    raise Exception.Create('Erro ao inserir Usuário: ' + ex.Message);
+    raise Exception.Create('Erro ao inserir Usuï¿½rio: ' + ex.Message);
   end;
 end;
 
@@ -141,7 +141,7 @@ begin
       .AddParam('ID', FEntity.ID)
     .ExecSQL;
   except on ex:exception do
-    raise Exception.Create('Erro ao alterar Usuário: ' + ex.Message);
+    raise Exception.Create('Erro ao alterar Usuï¿½rio: ' + ex.Message);
   end;
 end;
 
